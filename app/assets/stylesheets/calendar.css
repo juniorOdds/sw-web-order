@@ -1,0 +1,48 @@
+/*
+ *= require simple_calendar
+ */
+
+ .simple-calendar {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .simple-calendar table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .simple-calendar th {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    font-weight: 600;
+    text-align: left;
+  }
+  
+  .simple-calendar td {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    vertical-align: top;
+  }
+  
+  .simple-calendar .calendar-heading {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .simple-calendar .calendar-heading a {
+    text-decoration: none;
+    color: #4f46e5;
+    padding: 0.5rem 1rem;
+  }
+  
+  .calendar-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 1rem;
+  }
+  
+  .prev-month, .next-month {
+    color: #9ca3af;
+  }
