@@ -46,3 +46,36 @@
   .prev-month, .next-month {
     color: #9ca3af;
   }
+  .box-text{
+    background-color: #4f46e5;
+    border-radius: 10px; 
+    padding: 10px;
+    color: aliceblue;
+    font-size: small;
+
+  }
+  .btn-group{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .btn-left{
+    background-color: #4f46e5;
+    border-radius: 10%;
+    padding: 10px;
+    color: white;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-right{
+    background-color: green;
+    border-radius: 10%;
+    padding: 10px;
+    color: white;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
