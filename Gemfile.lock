@@ -312,6 +312,7 @@ DEPENDENCIES
   sassc-rails
   selenium-webdriver
   simple_calendar
+  sprockets (~> 4.0)
   sprockets-rails
   sqlite3 (>= 1.4)
   stimulus-rails

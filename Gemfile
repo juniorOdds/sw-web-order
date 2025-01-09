@@ -4,6 +4,7 @@ ruby "3.3.1"
 gem 'simple_calendar'
 gem 'tailwindcss-rails'
 gem 'sassc-rails'
+gem 'sprockets', '~> 4.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.5"

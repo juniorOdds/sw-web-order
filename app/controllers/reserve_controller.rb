@@ -13,14 +13,16 @@ class ReserveController < ApplicationController
   def create
     @detail = Detail.new(detail_params)
     if @detail.save
-      redirect_to reserve_path
+      print("S")
+      redirect_to index_path, notice: 'reserve was successfully.'
     else
+      print("F")
       render :new
     end
   end
   
   private
   def detail_params
-    params.require(:detail).permit(:reservedName, :reservedDate, :zoneControl, :voltage, :deviceRange, :deviceType)
+    params.require(:detail).permit(:reservedName, :start_time, :zoneControl, :voltage, :deviceRange, :deviceType)
   end
 end

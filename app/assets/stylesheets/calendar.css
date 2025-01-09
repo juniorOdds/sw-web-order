@@ -80,3 +80,13 @@
     justify-content: center;
     align-items: center;
   }
+  .btn-empty{
+    background-color: grey;
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

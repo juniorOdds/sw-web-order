@@ -12,15 +12,16 @@
 
       <div class="btn-group">
         <% if left_count > 0 %>
-            <button class="btn-left">
-                Left <%= left_count %>
-            </button>
+            <%= button_to "Left #{left_count}",new_path , method: :get, class: "btn-left" %>
+
         <% end %>
 
         <% if right_count > 0 %>
-            <button class="btn-right">
-                Right <%= right_count %>
-            </button>
+            <%= button_to "Right #{right_count}", new_path, method: :get, class: "btn-right" %>
+
+        <% end %>
+        <% if left_count == 0 && right_count == 0 %>
+          <%= button_to "reserve", new_path, method: :get, class: "btn-empty" %>
         <% end %>
       </div>
     </div>
