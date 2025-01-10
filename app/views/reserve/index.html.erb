@@ -21,9 +21,10 @@
 
         <% end %>
         <% if left_count == 0 && right_count == 0 %>
-          <%= button_to "reserve", new_path, method: :get, class: "btn-empty" %>
+          <%= button_to "reserve", new_path, method: :get, class: "btn-empty", data: {turbo_frame: "modal-reserve-form"} %>
         <% end %>
       </div>
     </div>
   <% end %>
+  <%= turbo_frame_tag "modal-reserve-form" %>
 </div>

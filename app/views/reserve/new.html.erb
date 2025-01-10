@@ -1,20 +1,5 @@
-<%= form_with( model: @detail, url: reserve_path) do |form| %>
-    <%= form.label :reservedName, "ชื่อผู้จอง" %>
-    <%= form.text_field :reservedName %>
-    <%= form.label :start_time, "วันที่จอง" %>
-    <%= form.date_field :start_time %>
-    <%= form.label :zoneControl, "Zone" %>
-     <div class="gender-group">
-        <div><%= form.radio_button :zoneControl, 'Left' %> Left</div>
-        <div><%= form.radio_button :zoneControl, 'Right' %> Right</div>
-    </div>
-    <%= form.label :voltage, "Voltage" %>
-    <%= form.text_field :voltage %>
-    <%= form.label :deviceRange, "DeviceRange" %>
-    <%= form.text_field :deviceRange %>
-    <%= form.label :deviceType, "DeviceType" %>
-    <%= form.text_field :deviceType %>
-    <%= form.submit %>
+<%= stylesheet_link_tag "new", "data-turbo-track": "reload" %>
+    <%= turbo_frame_tag 'modal-reserve-form' do %>
+      <%= render 'reserveform', detail: @detail %>
+    <%end%>
 
-    
-<%end%>
