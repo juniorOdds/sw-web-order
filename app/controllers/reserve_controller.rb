@@ -1,5 +1,5 @@
 class ReserveController < ApplicationController
-  def index
+  def index 
     @details = Detail.all
   end
   def show
@@ -8,21 +8,31 @@ class ReserveController < ApplicationController
   
   def new
     @detail = Detail.new
+
+    if params[:date].present?
+      @detail.start_time = params[:date]
+    end 
+    Rails.logger.info "Date received: #{params[:date]}"
+
+    
+
+
   end
   
   def create
-    @detail = Detail.new(detail_params)
+    @detail = Detail.new(detail_params) 
+
     if @detail.save
-      print("S")
-      redirect_to index_path, notice: 'reserve was successfully.'
+      redirect_to index_path, notice: "Reservation was successfully created."
     else
-      print("F")
+      flash.now[:alert] = "Failed to create reservation. Please try again."
       render :new
     end
   end
   
   private
   def detail_params
-    params.require(:detail).permit(:reservedName, :start_time, :zoneControl, :voltage, :deviceRange, :deviceType)
+
+    params.require(:detail).permit(:reservedName, :start_time,:zoneControl, :voltage, :deviceRange, :deviceType, :start_time)
   end
 end

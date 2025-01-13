@@ -12,16 +12,16 @@
 
       <div class="btn-group">
         <% if left_count > 0 %>
-            <%= button_to "Left #{left_count}",new_path , method: :get, class: "btn-left" %>
+            <%= link_to "Left #{left_count}",new_path(date: date.iso8601) , method: :get, class: "btn-left" ,data: { turbo_frame: "modal-reserve-form" }%>
 
         <% end %>
 
         <% if right_count > 0 %>
-            <%= button_to "Right #{right_count}", new_path, method: :get, class: "btn-right" %>
+            <%= link_to "Right #{right_count}", new_path(date: date.iso8601), method: :get, class: "btn-right", data: { turbo_frame: "modal-reserve-form" }%>
 
         <% end %>
         <% if left_count == 0 && right_count == 0 %>
-          <%= button_to "reserve", new_path, method: :get, class: "btn-empty", data: {turbo_frame: "modal-reserve-form"} %>
+            <%= link_to "reserve", new_path(date: date.iso8601), class: "btn-empty", data: { turbo_frame: "modal-reserve-form" } %>
         <% end %>
       </div>
     </div>
