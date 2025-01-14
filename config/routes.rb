@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get "index", to: "reserve#index", as: :index
   get "reserve/new", to: "reserve#new", as: :new
   post "reserve", to: "reserve#create", as: :reserve
+  get "callback", to: "reserve#callback", as: :callback
 end

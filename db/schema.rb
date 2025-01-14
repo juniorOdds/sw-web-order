@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_12_20_131017) do
+ActiveRecord::Schema[7.1].define(version: 2025_01_13_101620) do
   create_table "details", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -21,6 +21,19 @@ ActiveRecord::Schema[7.1].define(version: 2024_12_20_131017) do
     t.string "deviceRange"
     t.string "deviceType"
     t.date "end_time"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "userID"
+    t.string "name"
+    t.string "password"
+    t.string "email"
+    t.string "phone"
+    t.string "depID"
+    t.string "dep"
+    t.string "roleID"
   end
 
 end
