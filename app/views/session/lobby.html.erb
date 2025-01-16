@@ -1,0 +1,20 @@
+
+<%= stylesheet_link_tag 'login' %>
+
+<div class="container-big">
+    <div class="logo-PEA">
+        <%= image_tag "logoPEA.png", class: "size-logo" %>    
+    </div>
+    <div class="btn-container">
+       <%= link_to lobby_path, method: :get, id: "btn-request" do %>
+            <div class="btnRequest">
+                Request Account
+            </div>
+        <% end %>
+        <%= link_to @keycloak_url do %>
+            <div class="btnLogin">
+              Sign in
+            </div>
+        <% end %>
+    </div>
+</div>

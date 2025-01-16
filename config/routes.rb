@@ -5,10 +5,11 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
 
   # Defines the root path route ("/")
-  root "reserve#index"
+  root "session#lobby" 
+  get "lobby", to: "session#lobby", as: :lobby
   #
   get "index", to: "reserve#index", as: :index
   get "reserve/new", to: "reserve#new", as: :new
   post "reserve", to: "reserve#create", as: :reserve
-  get "callback", to: "reserve#callback", as: :callback
+  get "callback", to: "session#callback", as: :callback
 end

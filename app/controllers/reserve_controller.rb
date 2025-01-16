@@ -1,13 +1,7 @@
 class ReserveController < ApplicationController
+  before_action:isLogin
   def index 
     @details = Detail.all
-    @keycloak_url = "http://localhost:8080/realms/SW_ORDER/protocol/openid-connect/auth?client_id=sw_order_localhost&redirect_uri=http://localhost:3000/callback&response_type=code&scope=openid"
-
-  end
-  def callback
-    @code = params[:code]
-    Rails.logger.info "Code received: #{@code}"
-    redirect_to root_path
 
   end
   def show

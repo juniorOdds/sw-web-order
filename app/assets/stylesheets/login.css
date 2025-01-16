@@ -1,0 +1,110 @@
+
+.container-big {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 50px;
+   
+}
+.logo-PEA{
+    display: flex;
+    justify-content: center;
+}
+.size-logo {
+    object-fit: contain;
+}
+.btn-container{
+    display: flex;
+    flex-direction: row;
+    gap: 30px
+}
+
+
+
+.btnRequest,
+.btnLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 60px;
+    padding: 15px;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btnRequest {
+    background-color: var(--tertiary);
+    color:  var(--secondary);
+}
+
+.btnLogin {
+    background-color:  var(--secondary);
+    color: var(--tertiary);
+}
+
+.btnRequest:hover {
+    background-color: var(--tertiary-hover);
+    cursor: pointer;
+}
+
+.btnLogin:hover {
+    background-color: var(--secondary-hover);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#btn-login,
+#btn-request {
+    color: inherit;
+    text-decoration: none;
+    
+}
+
+.btn-back {
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: 1px solid #000;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--tertiary);
+    color:  var(--secondary);
+
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+
+    .container-big {
+        gap: 10px;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 2px;
+    }
+
+    .btnRequest,
+    .btnLogin {
+        font-size: var(--fs-s);
+        margin-bottom: 15px;
+        max-width: 200px;
+        height: 50px;
+    }
+}
+
+
+
